@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Login </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <img src="assets/duoc.jpg" alt="duoc-logo" />
+    </ion-card-header>
+
+    <ion-card-content>
+      {{message}}
+      <form [formGroup]="formularioLogin">
+        <ion-card-content>
+          <ion-item>
+            <ion-input
+              placeholder="Usuario"
+              formControlName="usuario1"
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input
+              placeholder="Contraseña"
+              formControlName="password"
+              type="password"
+            ></ion-input>
+          </ion-item>
+          <br />
+          <ion-button expand="block" fill="outline" (click)="getUsuario();"
+            >Iniciar Sesion</ion-button
+          >
+          <ion-button expand="block" fill="outline" routerLink="/restablecer"
+            >Recuperar Contraseña</ion-button
+          >
+          <ion-button expand="block" fill="outline" routerLink="/registrar">Registrarse
+          </ion-button>
+        </ion-card-content>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

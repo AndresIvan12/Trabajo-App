@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registrar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formularioRegistro">
+    <ion-card-content>
+      <ion-item>
+        <Label>Registrar Usuario</Label>
+      </ion-item>
+      <br>
+      <label >Correo</label>
+      <ion-item>
+        <ion-input formControlName="correo"></ion-input>
+      </ion-item>
+      <label >Nombre</label>
+      <ion-item>
+        <ion-input  formControlName="usuario1" ></ion-input>
+      </ion-item>
+      <label >Password</label>
+      <ion-item>
+        <ion-input type="password" formControlName="password" ></ion-input>
+      </ion-item>
+      <br>
+      <ion-button expand="block" fill="outline"  (click)="createUsuario();" onclick="MensajeCargaRegistrar();">Registrase</ion-button>
+    </ion-card-content>
+  </form>
+</ion-content>
